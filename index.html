@@ -1,11 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Bangladesh</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- DaisyUI + Tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#B4F461",
+              "text-main": "#111111",
+              "text-sub": "#111111b3",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
-    <h1>Hello, World!</h1>
+    <!-- Header -->
+    <header>
+      <!-- navbar -->
+      <nav class="bg-[#FDD835]/15 px-2 py-6 backdrop-blur-md sm:px-6">
+        <div
+          class="mx-auto flex max-w-screen-xl flex-col items-center space-y-4 sm:flex-row sm:justify-between"
+        >
+          <a href="blog.html"
+            ><button
+              class="btn text-text-main bg-primary hidden h-fit rounded-lg px-8 py-3 text-xl font-bold sm:block"
+            >
+              Blog
+            </button></a
+          >
+          <div class="text-text-main flex items-center gap-4 font-semibold sm:text-xl">
+            <img src="assets/logo.png" class="h-12" />
+            <h2>Donate Bangladesh</h2>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="assets/coin.png" class="h-6" />
+            <h3 class="text-text-sub font-medium sm:text-xl">
+              <span id="money" class="mr-1">10000</span>BDT
+            </h3>
+          </div>
+          <a class="block sm:hidden" href="blog.html"
+            ><button class="text-text-main font-medium">Blog</button></a
+          >
+        </div>
+      </nav>
+
+      <!-- Buttons -->
+      <div class="flex justify-center gap-3 bg-white/10 py-4 pt-8">
+        <button
+          class="btn text-text-main bg-primary hidden h-fit rounded-lg px-8 py-3 text-xl font-bold sm:block"
+        >
+          Donation
+        </button>
+        <button
+          class="btn text-text-sub hidden h-fit rounded-lg border bg-white px-8 py-3 text-xl font-bold sm:block"
+        >
+          History
+        </button>
+      </div>
+      <!-- Buttons -->
+
+      <!-- navbar -->
+    </header>
+    <!-- Header -->
   </body>
 </html>
