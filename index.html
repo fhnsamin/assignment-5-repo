@@ -6,7 +6,13 @@
     <title>Donate Bangladesh</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+      body {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
 
     <!-- DaisyUI + Tailwind -->
     <link
@@ -70,13 +76,13 @@
       >
         <button
           id="donation-btn"
-          class="btn text-text-main bg-primary h-fit scale-90 rounded-lg px-8 py-3 text-xl font-bold"
+          class="btn text-text-main bg-primary hover:bg-primary/[.6] h-fit scale-90 rounded-lg px-8 py-3 text-xl font-bold"
         >
           Donation
         </button>
         <button
           id="history-btn"
-          class="btn text-text-sub h-fit scale-90 rounded-lg border bg-white px-8 py-3 text-xl font-bold"
+          class="btn text-text-sub hover:bg-primary/[.6] h-fit scale-90 rounded-lg border bg-white px-8 py-3 text-xl font-bold"
         >
           History
         </button>
@@ -85,6 +91,22 @@
     </header>
 
     <!-- Header -->
+
+    <!-- Modal -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box text-center">
+        <h3 class="text-2xl font-bold">Congrats!</h3>
+        <p class="flex justify-center py-4"><img src="./assets/coin.png" alt="" /></p>
+        <p class="text-text-sub font-light">You have donated for Humankind</p>
+        <h2 class="mt-2 text-lg font-medium">Successfully</h2>
+        <div class="modal-action flex justify-center">
+          <form method="dialog">
+            <button class="btn hover:bg-primary">Close Confirmation</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- Modal -->
 
     <!-- Main section -->
 
@@ -98,7 +120,7 @@
           </div>
           <div class="flex flex-col justify-between">
             <h4 class="-z-10 mb-4 flex w-fit gap-2 rounded bg-gray-100 px-4 py-2 drop-shadow">
-              <img src="assets/coin.png" class="h-6" /> <span>0</span>BDT
+              <img src="assets/coin.png" class="h-6" /> <span id="noa-money">0</span>BDT
             </h4>
             <div class="space-y-4">
               <h2 class="text-text-main text-xl font-bold">
@@ -115,10 +137,11 @@
             <input
               class="placeholder:text-text-sub mb-4 mt-6 w-full rounded-lg border-2 p-4 placeholder:font-light"
               type="text"
-              id=""
+              id="noa-input"
               placeholder="Write Donation Amount"
             />
             <button
+              id="noa-btn"
               class="btn text-text-main bg-primary h-fit w-full rounded-lg px-8 py-3 text-xl font-bold"
             >
               Donate Now
@@ -133,7 +156,7 @@
           </div>
           <div class="flex flex-col justify-between">
             <h4 class="-z-10 mb-4 flex w-fit gap-2 rounded bg-gray-100 px-4 py-2 drop-shadow">
-              <img src="assets/coin.png" class="h-6" /> <span>0</span>BDT
+              <img src="assets/coin.png" class="h-6" /> <span id="feni-money">0</span>BDT
             </h4>
             <div class="space-y-4">
               <h2 class="text-text-main text-xl font-bold">
@@ -151,10 +174,11 @@
             <input
               class="placeholder:text-text-sub mb-4 mt-6 w-full rounded-lg border-2 p-4 placeholder:font-light"
               type="text"
-              id=""
+              id="feni-input"
               placeholder="Write Donation Amount"
             />
             <button
+              id="feni-btn"
               class="btn text-text-main bg-primary h-fit w-full rounded-lg px-8 py-3 text-xl font-bold"
             >
               Donate Now
@@ -169,7 +193,7 @@
           </div>
           <div class="flex flex-col justify-between">
             <h4 class="-z-10 mb-4 flex w-fit gap-2 rounded bg-gray-100 px-4 py-2 drop-shadow">
-              <img src="assets/coin.png" class="h-6" /> <span>0</span>BDT
+              <img src="assets/coin.png" class="h-6" /> <span id="quota-money">0</span>BDT
             </h4>
             <div class="space-y-4">
               <h2 class="text-text-main text-xl font-bold">
@@ -188,10 +212,11 @@
             <input
               class="placeholder:text-text-sub mb-4 mt-6 w-full rounded-lg border-2 p-4 placeholder:font-light"
               type="text"
-              id=""
+              id="quota-input"
               placeholder="Write Donation Amount"
             />
             <button
+              id="quota-btn"
               class="btn text-text-main bg-primary h-fit w-full rounded-lg px-8 py-3 text-xl font-bold"
             >
               Donate Now
@@ -203,7 +228,7 @@
 
       <!-- History section -->
       <section id="history" class="mx-auto hidden w-full max-w-screen-xl space-y-4 px-6 sm:w-[90%]">
-        <div class="mx-auto w-full space-y-3 rounded-lg border-2 p-4 sm:p-8">
+        <div class="mx-auto w-full space-y-3 rounded-2xl border-2 p-4 sm:p-8">
           <h3 class="text-text-main text-xl font-bold">
             96500 Taka is Donated for famine-2024 at Feni, Bangladesh
           </h3>

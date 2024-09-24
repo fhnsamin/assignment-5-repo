@@ -2,10 +2,6 @@ function getInputValue(id) {
   return Number(document.getElementById(id).value);
 }
 
-function getInnerTex(id) {
-  return Number(document.getElementById(id).innerText);
-}
-
-function getMainBalanceById(id) {
+function getBalanceById(id) {
   return Number(document.getElementById(id).innerText);
 }
